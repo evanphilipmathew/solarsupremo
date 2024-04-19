@@ -8,11 +8,18 @@ header {
     align-items: center;
     padding: 10px;
     background: #f5f5f5;
+    flex-wrap: wrap;
  }
 .logo img {
     height: 50px; /* Adjust as needed */
     width: auto; /* Keeps aspect ratio */
  }
+ nav {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  background-color: #f4f4f4; /* Example background color */
+  padding: 10px 0; /* Example padding */
+}
 nav a {
     text-decoration: none;
     color: #333;
@@ -177,35 +184,25 @@ footer {
 }
 
   /* Responsive styles */
-  @media (min-width: 768px) {
-    .banner-content {
-      padding: 150px 20px;
-    }
-    .banner h1 {
-      font-size: 3em;
-    }
-    .banner p {
-      font-size: 1.5em;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    nav {
-      display: none; /* Hide nav for mobile */
-    }
-    .mobile-menu {
-      display: block;
-      text-align: right;
-    }
-    .mobile-menu-icon {
-      font-size: 2em;
-      cursor: pointer;
-    }
+  @media screen and (max-width: 767px) {
     header {
-      padding: 10px;
+        flex-direction: column; /* Stack flex items vertically */
+        justify-content: center; /* Center items when stacked */
+        align-items: center; /* Align items in the center */
     }
-  }
-  
+
+    .logo {
+        margin-bottom: 20px; /* Adds some space between the logo and nav */
+    }
+
+    nav {
+        width: 100%; /* Full width navigation */
+    }
+
+    nav a {
+        display: block; /* Stack links vertically */
+    }
+}
   /* Flexbox fallback for older browsers */
   .flex-container {
     display: flex;
