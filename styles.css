@@ -164,6 +164,18 @@ nav a {
   height: auto;
 }
 
+footer {
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px 20px; /* Adds padding inside the footer */
+  max-height: 50px; /* Sets a maximum height to keep the footer compact */
+  overflow: hidden; /* Prevents overflow of content outside the set max-height */
+  background-color: #f4f4f4; /* Gives a light background color to the footer */
+  box-sizing: border-box; /* Includes padding in the height calculation */
+  display: flex; /* Enables the use of flexbox properties */
+  justify-content: center; /* Centers content horizontally in flexbox */
+  align-items: center; /* Centers content vertically in flexbox */
+}
+
   /* Responsive styles */
   @media (min-width: 768px) {
     .banner-content {
